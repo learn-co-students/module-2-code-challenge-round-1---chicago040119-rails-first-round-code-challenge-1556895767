@@ -32,6 +32,10 @@ class HeroinesController < ApplicationController
     render :index
   end
 
+  def egg
+    render :egg
+  end
+
 
   private
 

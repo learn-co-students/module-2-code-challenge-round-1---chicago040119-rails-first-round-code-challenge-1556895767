@@ -10,7 +10,4 @@
   <%= f.label :power_id %>
   <%= f.collection_select :power_id, Power.all, :id, :name, {:prompt => 'Please Select a Power'} %><br><br>
   <%= f.submit %>
-
-
-
 <% end %>
