@@ -1,14 +1,11 @@
+<h1>Create New Heroine:</h1>
+
 <%= form_for @heroine do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %><br>
   <%= f.label :super_name %>
   <%= f.text_field :super_name %><br>
 
-  <%= f.fields_for @powers do |power| %>
-    <li>
-      <%= power.label :name %>
-      <%= radio_button_tag(:power) %>
-    </li>
-  <% end %>
 
+  <%= f.submit "Create Heroine" %>
 <% end %>
