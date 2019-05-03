@@ -1,5 +1,12 @@
 class PowersController < ApplicationController
-  def index
+
+def index
     @powers = Power.all
   end
-end
+
+   def show
+    @power = Power.find(params[:id])
+    @heroine = Heroine.all.select {|heroine| heroine.power == @power }
+  end
+
+ end
