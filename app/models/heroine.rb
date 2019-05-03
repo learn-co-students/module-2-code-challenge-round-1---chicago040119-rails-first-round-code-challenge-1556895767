@@ -3,5 +3,6 @@ class Heroine < ApplicationRecord
 
   validates :super_name, presence: true, uniqueness: true
   validates :name, presence: true
+  validates :power_id, presence: true
 
 end

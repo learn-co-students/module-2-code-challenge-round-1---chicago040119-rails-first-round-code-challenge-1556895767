@@ -1,4 +1,5 @@
 <h1>Create a New Heroine!</h1>
+<h3><%= link_to "Back to all Heroines", heroines_path %></h3>
 <br>
 
 <%= form_for @heroine do |f| %>
@@ -7,7 +8,7 @@
   <%= f.label :super_name %>
   <%= f.text_field :super_name %><br><br>
   <%= f.label :power_id %>
-  <%= f.collection_select :power_id, Power.all, :id, :name %><br><br>
+  <%= f.collection_select :power_id, Power.all, :id, :name, {:prompt => 'Please Select a Power'} %><br><br>
   <%= f.submit %>
 
 
