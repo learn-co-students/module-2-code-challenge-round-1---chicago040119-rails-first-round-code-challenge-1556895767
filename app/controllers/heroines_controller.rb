@@ -24,7 +24,11 @@ class HeroinesController < ApplicationController
   end
 
   def search
-    @heroines = Heroine.all.select {|heroine| heroine.power.name == params[:q]}
+    if params[:q] == ""
+      @heroines = Heroine.all
+    else
+      @heroines = Heroine.all.select {|heroine| heroine.power.name == params[:q]}
+    end
     render :index
   end
 
