@@ -1,0 +1,23 @@
+<h1><%= @power.name.titleize %></h1>
+
+<h3>Description:</h3>
+<p>
+  <%= @power.description %>
+</p>
+
+<h3>Heroines who have this power:</h3>
+
+<ul>
+
+<% @heroines.each do |heroine| %>
+  <li>
+    <%= link_to heroine.name, heroine_path(heroine) %>
+  </li>
+
+<% end %>
+
+</ul>
+
+<br><br>
+
+<%= link_to "Go back to all powers", powers_path %>
