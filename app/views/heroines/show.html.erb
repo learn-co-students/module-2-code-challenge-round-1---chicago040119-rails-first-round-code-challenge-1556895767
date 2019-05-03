@@ -1,0 +1,8 @@
+
+<h1><%= @heroine.name %></h1>
+<h3>is<h3>
+<h1><%= @heroine.super_name %></h1>
+<h3>They have the power of:</h3>
+<h1><%= link_to @heroine.power, @heroine.power %></h1>
+
+ <%= link_to "All Heroines", heroines_path %>
